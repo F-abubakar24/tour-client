@@ -1,0 +1,19 @@
+.not_found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.not_found div > i{
+    font-size: 100px;
+}
+
+.not_found div h1{
+    font-size: 60px;
+}
+
+
+.not_found div a i{
+    margin-right: 10px;
+}
