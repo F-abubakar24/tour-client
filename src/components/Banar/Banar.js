@@ -17,8 +17,8 @@ const Banar = () => {
                     />
                     <Carousel.Caption>
                         <div className="banar_text text-start">
-                            <h2>Upto 25% off on first booking Car touring your app!</h2>
-                            <p>Taciti quasi, sagittis excepteur hymenaeos, id temporibus hic proident ullam, eaque donec delectus tempor consectetur nunc, purus congue? Rem volutpat sodales! Mollit. Minus exercitationem wisi.</p>
+                            <h3>Upto 25% off on first booking Car!</h3>
+                            <p>Taciti quasi, sagittis excepteur hymenaeos, Minus exercitationem wisi.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -31,8 +31,8 @@ const Banar = () => {
 
                     <Carousel.Caption>
                         <div className="banar_text text-start">
-                            <h2>Lest Discover the World toGether!</h2>
-                            <p>Taciti quasi, sagittis excepteur hymenaeos, id temporibus hic proident ullam, eaque donec delectus tempor consectetur nunc, purus congue? Rem volutpat sodales! Mollit. Minus exercitationem wisi.</p>
+                            <h3>Discover the World toGether!</h3>
+                            <p>Taciti quasi, sagittis excepteur hymenaeos, Minus exercitationem wisi.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -45,8 +45,8 @@ const Banar = () => {
 
                     <Carousel.Caption>
                         <div className="banar_text text-start">
-                            <h2>choose your luxury hotel in Moritz!</h2>
-                            <p>Taciti quasi, sagittis excepteur hymenaeos, id temporibus hic proident ullam, eaque donec delectus tempor consectetur nunc, purus congue? Rem volutpat sodales! Mollit. Minus exercitationem wisi.</p>
+                            <h3>choose your luxury hotel!</h3>
+                            <p>Taciti quasi, sagittis excepteur hymenaeos, Minus exercitationem wisi.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>

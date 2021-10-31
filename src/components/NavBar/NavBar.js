@@ -13,16 +13,17 @@ const NavBar = () => {
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home"><img src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Collapse className="justify-content-end nav_btn">
 
 
-                        <NavDropdown title="Home" id="collasible-nav-dropdown">
+                        <NavDropdown title="Home" id="collasible-nav-dropdown" className="btn_nav_dropdown">
                             <NavDropdown.Item as={HashLink} to="/home#home">Home</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item as={HashLink} to="/home#aboutUs">AboutUs</NavDropdown.Item>
+                            <NavDropdown.Item as={HashLink} to="/home#services">Hotels</NavDropdown.Item>
+                            <NavDropdown.Item as={HashLink} to="/home#works">Works</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#doctors">Doctors</Nav.Link>
+                        {/* <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link> */}
+                        <Nav.Link as={HashLink} to="/manageOrders">ManageOrders</Nav.Link>
                         <Nav.Link as={HashLink} to="/aboutUs">AboutUs</Nav.Link>
                         <Nav.Link as={HashLink} to="/contact">Contact</Nav.Link>
                         {user?.email ?

@@ -1,0 +1,10 @@
+.contact_i i{
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+    padding-bottom: 10px;
+    transition: .5s;
+}
+.contact_i i:hover{
+    color: #0066ff;
+}

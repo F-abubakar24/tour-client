@@ -9,10 +9,22 @@
 
 }
 .user_display_name{
-    color: green;
+    color: #2D3E52;
     font-size: 15px;
     margin-right: 10px;
     margin-bottom: 0px;
+}
+
+.nav_btn>a,
+.btn_nav_dropdown>a {
+    color: #01B7F2;
+}
+.nav_btn>a:focus,
+.btn_nav_dropdown>a:focus{
+    color: #2D3E52;
+}
+.btn_nav_dropdown{
+
 }
 
 /* ============================= */
