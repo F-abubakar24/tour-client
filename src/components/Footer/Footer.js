@@ -34,7 +34,7 @@ const Footer = () => {
                             <p className="title">Join With Us</p>
                             <div className="footer_subscribe">
                                 <p>Ugiat nulla pariatur. Edeserunt mollit anim id est laborum. </p>
-                                <input type="text" />
+                                <input type="text" placeholder="Your E-mail"/>
                                 <button>SUBSCRIBE</button>
                             </div>
                         </div>

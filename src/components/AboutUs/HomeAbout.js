@@ -16,7 +16,7 @@ const HomeAbout = () => {
                         non massa.
                     </h4>
                     <p>
-                        Health care in the United States is provided by many
+                        Ship travel in the United States is provided by many
                         distinct organizations, made up of insurance companies,
                         healthcare providers, hospital systems, and independent
                         providers. ... Healthcare coverage is provided through a

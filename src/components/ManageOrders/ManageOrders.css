@@ -1,0 +1,12 @@
+.orders{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.orders> h2{
+    color: #2196F5;
+    font-weight: 700;
+}
+.single_order{
+    border: 2px solid #2196F5 !important;
+    box-shadow: 0px 10px 22px -12px !important;
+}

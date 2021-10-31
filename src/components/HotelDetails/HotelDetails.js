@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useAuth from '../hooks/useAuth';
 import './HotelDetails.css'
 
@@ -8,7 +8,8 @@ const HotelDetails = () => {
     const { hotelId } = useParams();
     const [hotel, setHotel] = useState();
     const { user } = useAuth()
-    const [users, setUsers] = useState({});
+    const [users, setUsers] = useState("")
+
     const {
         register,
         handleSubmit,
@@ -16,18 +17,16 @@ const HotelDetails = () => {
         formState: { errors },
     } = useForm();
 
-
+    let updateName = "";
     const handleNameChange = e => {
-        const updateName = e.target.value;
-        const updateUser = { ...users };
-        updateUser.name = updateName;
-        setUsers(updateUser);
+        const Name = e.target.value;
+        updateName = updateName + Name;
+        setUsers(updateName)
     }
 
     // send users booking form data
     const onSubmit = (data) => {
-        console.log(data)
-        fetch("http://localhost:4000/booking", {
+        fetch("https://stormy-shore-74082.herokuapp.com/booking", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -36,6 +35,7 @@ const HotelDetails = () => {
         })
             .then((res) => res.json())
             .then((result) => {
+                
                 if (result.insertedId) {
                     alert("Order processed Successfully");
     
@@ -46,7 +46,7 @@ const HotelDetails = () => {
     
     // load single users data
     useEffect(() => {
-        fetch(`http://localhost:4000/hotels/${hotelId}`)
+        fetch(`https://stormy-shore-74082.herokuapp.com/hotels/${hotelId}`)
             .then(res => res.json())
             .then(data => setHotel(data))
     }, [])
@@ -83,7 +83,7 @@ const HotelDetails = () => {
                                 <h2>Book Now</h2>
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-floating mb-3 mt-4">
-                                        <input {...register("name")} value={user?.displayName || ""} onChange={handleNameChange} type="text" className="form-control" id="floatingInput" required placeholder=" "/>
+                                        <input {...register("name")} value={user?.displayName || users || ""} onChange={handleNameChange} type="text" className="form-control" id="floatingInput" required placeholder=" "/>
                                         <label htmlFor="floatingInput">Full Name</label>
                                     </div>
                                     <div className="form-floating mb-3">
@@ -95,7 +95,7 @@ const HotelDetails = () => {
                                         <label htmlFor="floatingInput">City</label>
                                     </div>
                                     <div className="form-floating mb-3">
-                                        <input {...register("phone")} type="tel" className="form-control" id="floatingInput" placeholder=" "/>
+                                        <input {...register("phone")} type="tel" className="form-control" id="floatingInput" required placeholder=" "/>
                                         <label htmlFor="floatingInput">Phone</label>
                                     </div>
                                     {/* <p className="text-danger">{error || userError}</p> */}

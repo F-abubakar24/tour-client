@@ -25,7 +25,7 @@ const Register = () => {
         };
     //------------------------
 
-    const handleRagistration = (e) => {
+    const handleRegistration = (e) => {
         e.preventDefault();
         if(password.length < 6){
             setUserError('Password should be at least 6 characters')
@@ -34,6 +34,7 @@ const Register = () => {
         emailAndPasswordSignUp(email, password);
         updateUserName(name);
         setUserError("");
+        history.push(location.state?.from || '/home')
     }
 
         // rediract location manage
@@ -54,7 +55,7 @@ const Register = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 mx-auto form_wrapper">
                     <div className=" text-center">
                         <h2>Register</h2>
-                        <form onSubmit={handleRagistration}>
+                        <form onSubmit={handleRegistration}>
                             <div className="form-floating mb-3 mt-4">
                                 <input onBlur={handleName} type="text" className="form-control" id="floatingInput" required placeholder=" "/>
                                 <label htmlFor="floatingInput">Full Name</label>

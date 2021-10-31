@@ -28,6 +28,7 @@ const Login = () => {
         }
         emailAndPasswordLogIn(email, password)
         setUserError("")
+        history.push(location.state?.from || '/home')
     }
         // rediract location manage
     const handleGoogleSignIn = () => {

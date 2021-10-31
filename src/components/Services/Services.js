@@ -6,7 +6,7 @@ import './Services.css';
 const Services = () => {
     const [hotels, setHotels] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/hotels')
+        fetch('https://stormy-shore-74082.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotels(data))
     }, [])
